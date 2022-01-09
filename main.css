@@ -1,0 +1,15 @@
+/* font for headlines*/
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+/* font list for the body are Helvetica, Arial, sans-serif*/
+
+
+header {
+    background-color: #6495ED;
+}
+main {
+    background-color: #FAEBD7;
+}
+a {
+    color: #FAEBD7;
+}
