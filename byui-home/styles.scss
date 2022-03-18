@@ -1,0 +1,238 @@
+@import 'typography';
+@import 'icons';
+
+$sm-break: 48em;
+// colors
+$dark-gray: #727272;
+$med-gray: #b4b3b5;
+$light-gray: #eaeaea;
+$body-font: #020202;
+$link-blue: #0076b6; //why do we have both of these blues?
+$byui-blue: #056cb6;
+
+// Utility classes
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+//header
+  //nav
+  body{
+    font-size: 15px;
+      font-style: normal;
+      text-transform: inherit;
+
+      background-color: #fff;
+      color: $body-font;
+      font-family: "BYUI Open Sans","Open Sans","Lucida Sans Unicode","Lucida Grande",Verdana,sans-serif;
+      font-weight: 400;
+      margin: 0;
+  }
+  header {
+    margin-bottom: 40px;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+  }
+  .white-text{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $byui-blue;
+    height:60px ;
+    
+  }
+  .site-banner__left > h1{
+    display: none;
+  }
+  .site-banner__left > a{
+    color: #fff;
+    background-color: #020202;
+    font-size: 30px;
+    padding: 9px;
+    text-decoration: none;
+
+  }
+  .site-banner__right{
+    color: #fff;
+    font-size: 30px;
+    padding: 10px;
+    text-decoration: none;
+  }
+  .site-banner__right> a {
+    text-decoration: none;
+    color: #fff;
+    
+  }
+
+  form{
+    display: none;
+  }
+
+
+  //header name
+  
+  .header-name {
+    background-color: #eaeaea;
+    text-align: left;
+    border-bottom: 1px solid #727272;
+    &__font{
+      margin:0;
+      padding: 15px;
+      font-weight: 300;
+    }
+  }
+  
+//main
+
+
+
+.main-container {
+  padding: 0 15px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 30px;
+  
+
+} 
+
+//univerity info banner
+.main-container__university-info-banner {
+  background: black;
+  color: white;
+  padding: 20px 40PX;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+.main-container__media{
+  
+  width: 100%;
+ 
+
+  .main-container__image{
+    background-color: #b4b3b5;
+    width:auto;
+    height: auto;
+    margin-bottom:30px;
+  }
+}
+
+//interst media
+.interest-media{
+  background-color: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 30px;
+  max-width: 480px;
+
+  &__left{
+    
+    width:100%;
+    height: auto;
+  }
+
+  //figure
+  .figure{
+    
+   
+    margin: 0;
+    border: 1px solid #727272;
+  }
+}
+
+
+
+
+.main-container__newsroom{
+  background-color: #b4b3b5;
+  width: 100%;
+  height: 180px;
+}
+.main-container__info{
+  background-color: #eaeaea;
+  border: 1px solid #727272;
+  width: 100%;
+  border-radius: 4px;
+  font-weight: 700;
+  
+  display: flex;
+  justify-content: center;
+}
+.main-container__links{
+  background-color: #b4b3b5;
+  width: 100%;
+  height: 180px;
+}
+.main-container__dates{
+  background-color: #b4b3b5;
+  width: 100%;
+  height: 180px;
+}
+.main-container__message{
+  background-color: #b4b3b5;
+  width: 100%;
+  height: 180px;
+}
+
+/*large */
+@media only screen and (min-width: 64rem){
+  .main-container {
+    padding: 0 15px;
+    width: 1024px;
+    margin: auto;
+    display: grid;
+    grid-template-columns:2fr 1fr;
+    grid-template-rows:auto;
+  }
+
+  .main-container__university-info-banner{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    height: 60px;
+  }
+  .main-container__media{
+    grid-column: 1/2;
+    grid-row: 2/4;
+
+    .interest-media{
+      display: flex;
+      max-width: 100%;
+
+    }
+  }
+  .main-container__info{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    height: 30px;
+  }
+  .main-container__links{
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+
+  .main-container__dates{
+    grid-column: 2/3;
+  }
+}
